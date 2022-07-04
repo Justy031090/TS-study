@@ -1,3 +1,4 @@
 node_modules
 dist
 drag_and_drop_list/dist
+.gitignore
