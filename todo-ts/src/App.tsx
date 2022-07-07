@@ -13,10 +13,15 @@ function App() {
             { id: Math.random().toString(), text },
         ]);
     };
+    const todoDeleteHandlers = (todoId: string) => {
+        setTodos((prevTodos) => {
+            return prevTodos.filter((todo) => todo.id !== todoId);
+        });
+    };
     return (
         <div className="App">
             <NewTodo onAdd={todoAddHandler} />
-            <TodoList items={todos}></TodoList>
+            <TodoList items={todos} onDelete={todoDeleteHandlers}></TodoList>
         </div>
     );
 }
