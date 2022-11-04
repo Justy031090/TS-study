@@ -33,9 +33,9 @@ const App = () => {
             },
         });
         setCode(result.outputFiles[0].text);
-
-        console.log(result);
     };
+
+    const html = `<script> ${code} </script>`;
 
     return (
         <div>
@@ -47,6 +47,7 @@ const App = () => {
                 <button onClick={onClick}>Submit</button>
             </div>
             <pre>{code}</pre>
+            <iframe title="meh" srcDoc={html} sandbox="allow-scripts" />
         </div>
     );
 };
