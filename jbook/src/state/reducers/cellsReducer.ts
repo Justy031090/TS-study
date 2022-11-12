@@ -41,7 +41,7 @@ const reducer = produce((state: CellState = initialState, action: Action) => {
             state.order[index] = state.order[targetIndex];
             state.order[targetIndex] = action.payload.id;
 
-            return;
+            return state;
         case ActionType.INSERT_CELL_BEFORE:
             const cell: Cell = {
                 content: '',
