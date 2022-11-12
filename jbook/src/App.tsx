@@ -1,10 +1,10 @@
 import 'bulmaswatch/superhero/bulmaswatch.min.css';
-import TextEditor from './components/TextEditor';
+import CellList from './components/CellList';
 
 const App = () => {
     return (
         <div>
-            <TextEditor />
+            <CellList />
         </div>
     );
 };
